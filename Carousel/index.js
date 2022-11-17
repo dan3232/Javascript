@@ -1,6 +1,8 @@
 const slides = document.getElementsByClassName("carousel-item"),
     nextBtn = document.getElementById("carousel-btn-next"),
-    prevBtn = document.getElementById("carousel-btn-prev");
+    prevBtn = document.getElementById("carousel-btn-prev"),
+    numSlide = document.getElementById("slide-num"),
+    movieName = document.getElementsByClassName("name");
 
 let slidePosition = 0;
 
@@ -16,6 +18,8 @@ function hideAllSlides() {
     }
 }
 
+setInterval(moveToNextSlide, 6000);
+
 function moveToNextSlide () {
     hideAllSlides();
 
@@ -27,6 +31,8 @@ function moveToNextSlide () {
 
     slides[slidePosition].classList.remove("carousel-item-hidden");
     slides[slidePosition].classList.add("carousel-item-visible");
+    
+    changeData();
 };
 
 function moveToPrevSlide () {
@@ -39,5 +45,20 @@ function moveToPrevSlide () {
     }
 
     slides[slidePosition].classList.remove("carousel-item-hidden");
-    slides[slidePosition].classList.add("carousel-item-visible");
+    slides[slidePosition].classList.add
+    ("carousel-item-visible");
+    
+    changeData();
 };
+
+function changeData() {
+    if (slidePosition === 0) {
+        movieName.textContent = "Joker";
+    } else if (slidePosition === 1) {
+        movieName.textContent = "Jojo Rabbit"
+    } else (
+        movieName.textContent = "The Batman"
+    )
+    numSlide.textContent = slidePosition + 1;
+    console.log(numSlide.textContent)
+}

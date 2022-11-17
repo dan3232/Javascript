@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(40, 39, 39);
 }
 
 #carousel {
@@ -23,7 +25,7 @@ img {
 
 .carousel-item-visible {
     display: block;
-    animation: fadeVisibility 0.5s;
+    animation: fadeVisibility 2s;
 }
 
 #carousel-actions {
@@ -31,7 +33,7 @@ img {
     width: 100%;
     display: flex;
     justify-content:space-between;
-    top: 50%;
+    top: 27%;
     transform: translateY(-50%);
 }
 
@@ -61,4 +63,53 @@ button {
     100% {
         opacity: 1;
     }
+}
+
+#slide-num {
+    position: absolute;
+    top: 0%;
+    color:#000;
+    margin: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow:0 0 5px white ;
+}
+
+#movie-info {
+    max-width: 600px;
+    margin: 30px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin-top: 15px;
+}
+
+.categories p,
+#name,
+.info {
+    color: white;
+}
+
+.categories p {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 4px 15px;
+}
+
+#name {
+    font-size: 48px;
+    margin: 0px;
+}
+
+.info {
+    font-size: 18px;
+
+}
+
+#movie-info a {
+    color: rgb(86, 103, 250);
+    text-decoration: none;
 }
