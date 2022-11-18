@@ -1,0 +1,53 @@
+.container {
+    max-width: 500px;
+}
+
+#resetBtn {
+    display: none;
+}
+
+
+#message {
+    text-align: center;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dice {
+    background-color: rgb(215, 207, 102);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;   
+    border-radius: 20px;
+}
+
+.active {
+    box-shadow: 0 0 20px black;
+}
+
+button {
+    display: flex;
+    margin:40px auto;  
+    background-color: rgb(248, 107, 107);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(231, 100, 100);
+}
+
+button:active {
+    background-color: rgb(233, 78, 78);
+}
