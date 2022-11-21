@@ -1,0 +1,107 @@
+body,
+html {
+    font-family: sans-serif;
+    background-color: rgb(14, 139, 139);
+    z-index: -1;
+    position: relative;
+}
+
+.header {
+    background-image: url(./cta_alt.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    width: 50%;
+    height: 23vh;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    margin-bottom: 15px;
+    
+}
+
+.header h1 {
+    padding: 15px;
+    margin: 0;
+}
+
+.grid {
+    width: 300px;
+    height: 300px;
+    border: 20px solid rgb(31, 94, 43);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.square-light {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(79, 156, 93);
+}
+
+.square-dark {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(61, 120, 72);
+}
+
+.snake {
+    background-color: rgb(53, 39, 158);
+}
+
+.apple {
+    background-color: red;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#start {
+    padding: 16px 32px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+
+#start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 107%;
+    background: linear-gradient(
+        45deg,
+        red, blue, deeppink, greenyellow, blue, red,
+        red, blue, deeppink, greenyellow, blue, red
+    );
+    background-size:800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
